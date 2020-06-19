@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware } from "redux";
 import rootReducer from "../reducers/index";
-import { badWordsMiddlware } from "../middlware";
+import { badWordsMiddlware } from "../middleware";
 
 const store = createStore(
     rootReducer,
