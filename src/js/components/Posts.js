@@ -12,11 +12,23 @@ export class Post extends Component {
     }
 
     render() {
-        return null;
+        return (
+            <ul>
+                {this.props.articles.map(el => (
+                    <li key={el.id}>{el.title}</li>
+                ))}
+            </ul>
+        )
     }
 }
 
+function select(state) {
+    return {
+        articles: state.remoteArticles.slice(0, 10)
+    };
+}
+
 export default connect(
-    null,
+    select,
     { getData }
 )(Post);
