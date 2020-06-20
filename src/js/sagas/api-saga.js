@@ -13,8 +13,6 @@ function* workerSaga() {
     }
 }
 
-function getData() {
-    return fetch("https://jsonplaceholder.typicode.com/posts").then(res => 
-        res.json()
-    );
+function getData(url) {
+    return fetch(url).then(res => res.json());
 }
